@@ -1,0 +1,139 @@
+/* General */
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background: #fff url('others/bg.png') no-repeat fixed 0% 100%;
+    background-size: 100%;
+    color: #333;
+    font-family: "Microsoft YaHei", "WenQuanYi Micro Hei", SimHei, tahoma, sans-serif;
+    font-size: 20px;
+    -webkit-font-smoothing:antialiased;
+    line-height: 2;
+}
+
+/* Box */
+.box {
+    background: rgba(255, 255, 255, .8);
+    width: 60%;
+    padding: 2% 2% 2% 5%;
+    position: absolute;
+    top: 5%;
+    right: 0%;
+    box-shadow: 0 0 20px 5px #751d1f;
+}
+    .box-title {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+    .box-sec {
+        clear: both;
+        border: 3px dashed #999;
+        margin: 30px 0;
+        padding: 1% 2%;
+    }
+        .done {
+            display: none;
+        }
+            .done-list {
+                margin: 10px 0;
+            }
+                .done-list li {
+                    list-style: none;
+                    background: #eee;
+                    border-radius: 10px;
+                    display: inline-block;
+                    font-weight: bold;
+                    margin: 0 10px 5px 0;
+                    padding: 0 10px;
+                }
+                .done-list:nth-child(odd) li {
+                    background: #ddd;
+                }
+        .box-total {
+            color: #d5262c;
+            margin: 5px;
+        }
+        .box-list {
+            min-height: 50px;
+            margin: 10px 0;
+        }
+            .box-list li {
+                list-style: none;
+                background: #eee;
+                border-radius: 10px;
+                display: inline-block;
+                font-weight: bold;
+                margin: 0 10px 5px 0;
+                padding: 0 10px;
+            }
+    .box-copyright {
+        font-weight: bold;
+    }
+
+/* Buttons */
+.box-btn {
+    background: #d5262c;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 24px;
+    display: inline-block;
+    margin: 0 2% 2% 0;
+    padding: 5px 15px;
+    text-decoration: none;
+}
+.box-btn:hover,
+.box-btn:active {
+    background: #a60508;
+    transition: background .3s ease;
+    -moz-transition: background .3s ease;
+    -webkit-transition: background .3s ease;
+}
+.cancel,
+.next {
+    background: #999;
+}
+.cancel:hover,
+.cancel:active,
+.next:hover,
+.next:active {
+    background: #666;
+    transition: background .3s ease;
+    -moz-transition: background .3s ease;
+    -webkit-transition: background .3s ease;
+}
+.box-btn.na {
+    cursor: default;
+    background: #ccc;
+}
+
+/* Number board */
+.box-num {
+    float: left;
+    font-size: 2em;
+    width: 9em;
+    height: 4em;
+    border: .1em solid #222;
+    border-radius: .2em;
+    overflow: hidden;
+    background: #4c4c4c;
+    background: -webkit-linear-gradient(top, #4c4c4c 0%, #0f0f0f 100%);
+    background: -moz-linear-gradient(top, #4c4c4c 0%, #0f0f0f 100%);
+    background: linear-gradient(to bottom, #4c4c4c 0%, #0f0f0f 100%);
+    margin: 0 2% 2% 0;
+}
+    .box-num span {
+        border-right: 5px solid #000;
+        color: #ddd;
+        font-family: Consolas, monaco, monospace;
+        float: left;
+        width: 32%;
+        height: 3em;
+        font-size: 2em;
+        line-height: 2;
+        text-align: center;
+    }
+    .box-num span:last-child {
+        border: none;
+    }

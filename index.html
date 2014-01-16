@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>抽奖机</title>
+    <link rel="stylesheet" href="luck.css" />
+</head>
+<body>
+    <div class="box">
+        <h1 class="box-title">欢迎使用抽奖机，来抽一发吧！</h1>
+        <div class="box-num" id="boxNum">
+            <span class="hundred" id="hundred">0</span>
+            <span class="ten" id="ten">0</span>
+            <span class="single" id="single">0</span>
+        </div>
+        <div>
+            <a class="box-btn" id="btn" href="javascript:void 0;">点我抽奖</a>
+            <a class="box-btn cancel na" id="btnCancel" href="javascript:void 0;">此号为空</a>
+            <p>
+                <a class="box-btn next na" id="btnNext" href="javascript:void 0;">下一奖项</a>
+            </p>
+        </div>
+        <div class="box-sec">
+            <p>当前奖项&nbsp;&nbsp;共<b class="box-total" id="boxTotal">0</b>人</p>
+            <ul class="box-list" id="boxList"></ul>
+            <div class="done" id="done">
+                <p>已抽奖项</p>
+            </div>
+        </div>
+        <p class="box-copyright">red-flower&nbsp;©&nbsp;2014</p>
+    </div>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10/jquery.min.js"></script>
+    <script type="text/javascript" src="luck.js"></script>
+</body>
+</html>
