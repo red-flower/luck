@@ -9,18 +9,23 @@ $(document).ready(function(){
         $hundred = $('#hundred'),
         $ten = $('#ten'),
         $single = $('#single'),
+        $waiting = $('#boxWaitingNum'),
+        $restart = $('#boxRestart'),
+        all = 150,
+        waiting = all,
         newNum,
         ary = [],
         doneNum = 0;
 
     //get a new lucky number
     function getNewNum(){
-        newNum = Math.floor( Math.random()*150 + 1 );
+        newNum = Math.floor( Math.random()*all + 1 );
         if (ary.indexOf(newNum) >= 0){
             console.log(newNum+ ' again');
             getNewNum();
         } else {
             ary.push(newNum);
+            $waiting.text(--waiting);
             if (newNum < 10){
                 newNum = '00' + newNum;
             } else if (newNum < 100){
@@ -38,6 +43,7 @@ $(document).ready(function(){
         ary.pop();
         console.log('after cancel: ' + ary);
         $total.text(ary.length - doneNum);
+        $waiting.text(++waiting);
         if ($total.text() === '0'){
             $cancel.addClass('na');
             $next.addClass('na');
@@ -88,5 +94,10 @@ $(document).ready(function(){
     $next.click(function(){
         nextRound();
         setZero();
+    });
+
+    //“restart” link click event
+    $restart.click(function(){
+        location.reload();
     });
 });

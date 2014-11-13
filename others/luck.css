@@ -4,7 +4,7 @@
     margin: 0;
 }
 body {
-    background: #fff url('others/bg.png') no-repeat fixed 0% 100%;
+    background: #fff url('bg.png') no-repeat fixed 0% 100%;
     background-size: 100%;
     color: #333;
     font-family: "Microsoft YaHei", "WenQuanYi Micro Hei", SimHei, tahoma, sans-serif;
@@ -27,6 +27,21 @@ body {
         font-size: 30px;
         margin-bottom: 10px;
     }
+        .box-waiting {
+            float: right;
+            font-size: 18px;
+            color: #666;
+        }
+            .box-waiting-num {
+                margin: 5px;
+                color: #333;
+            }
+        .box-restart {
+            color: #a60508;
+            float: right;
+            font-size: 18px;
+            margin-left: 10px;
+        }
     .box-sec {
         clear: both;
         border: 3px dashed #999;
